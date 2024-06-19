@@ -112,7 +112,7 @@ def NN_Models():
         saveModel()
 
     if input("Do you want to train the model? (y/n): ") == "y":
-        quickTrain(20)
+        quickTrain(5)
                    
     else:
         model = loadModel()
