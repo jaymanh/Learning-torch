@@ -46,6 +46,8 @@ def NN_Models():
                 nn.ReLU(),
                 nn.Linear(1024, 512),
                 nn.ReLU(),
+                nn.Linear(512, 512),
+                nn.ReLU(),
                 nn.Linear(512, 10)
             )
         
@@ -112,7 +114,7 @@ def NN_Models():
         saveModel()
 
     if input("Do you want to train the model? (y/n): ") == "y":
-        quickTrain(5)
+        quickTrain(50)
                    
     else:
         model = loadModel()
